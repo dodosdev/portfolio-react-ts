@@ -34,7 +34,7 @@ export default function Header() {
             <div className='header'>
                 <Link to='/' className='header-left'>
                     <FiShoppingBag />
-                    <span>Shoppy-Redux</span>
+                    <span><img src="/images/logo.JPG" alt="" /></span>
                 </Link>
                 <nav className='header-right'>
                     
