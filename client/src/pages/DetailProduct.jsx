@@ -5,28 +5,21 @@ import Detail from "../components/detail_tabs/Detail.jsx";
 import Review from "../components/detail_tabs/Review.jsx";
 import ImageList from "../components/commons/ImageList.jsx";
 import StarRating from "../components/commons/StarRating.jsx";
-import axios from "axios";
 import { useSelector, useDispatch } from 'react-redux';
 import { updateCartList, saveToCartList, clearAdded } from '../services/cartApi.js';
 import { getProduct, getSize } from '../services/productApi.js';
 
-
 export default function DetailProduct() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { pid } = useParams(); //use params를 통해옴
+  const { pid } = useParams();
   const isLoggedIn = useSelector(state => state.login.isLoggedIn);
   const cartList = useSelector(state => state.cart.cartList);
   const isAdded = useSelector(state => state.cart.isAdded);
-  const product = useSelector(state => state.product.product)
-  const imgList = useSelector(state => state.product.imgList)
-  const detailImgList = useSelector(state => state.product.detailImgList)
-  const size = useSelector(state => state.product.size)
-  
-  // const [product, setProduct] = useState({}); //상품 갖고오기
-  // const [imgList, setImgList] = useState([]); //이미지 갖고오기
-  // const [detailImgList, setDetailImgList] = useState([]);
-  // const [size, setSize] = useState("XS");
+  const product = useSelector(state => state.product.product);
+  const imgList = useSelector(state => state.product.imgList);
+  const detailImgList = useSelector(state => state.product.detailImgList);
+  const size = useSelector(state => state.product.size);
 
   const [tabName, setTabName] = useState('detail');
   const tabLabels = ['DETAIL', 'REVIEW', 'Q&A', 'RETURN & DELIVERY'];
@@ -41,7 +34,6 @@ export default function DetailProduct() {
 
   useEffect(() => {
     dispatch(getProduct(pid));
-
   }, []);
 
   
@@ -54,7 +46,6 @@ export default function DetailProduct() {
         if(findItem !== undefined) {  
             //pid, size 동일한 경우 qty +1
             dispatch(updateCartList(findItem.cid, "increase"));
-            alert("장바구니에 추가되었습니다.");
         } else {
             dispatch(saveToCartList(cartItem));
         }                                            

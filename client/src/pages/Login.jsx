@@ -3,9 +3,7 @@ import '../styles/login.css';
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { validateLogin } from '../utils/funcValidate.js';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../auth/AuthContext.js';
 import { getLogin, getLoginReset } from '../services/authApi.js';
 import { useSelector, useDispatch } from 'react-redux';
 

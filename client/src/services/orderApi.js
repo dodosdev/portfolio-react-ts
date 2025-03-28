@@ -1,9 +1,16 @@
-import { axiosPost } from './api.js';
+import { axiosPost, axiosPut } from './api.js';
 import { setOrderList, setMember, setIsSaveSuccess } from '../features/order/orderSlice.js';
 
-
-
-
+/**
+ * 배송지 변경
+ */
+export const getDeliveryAddressUpdate = (zipcode, address) => async(dispatch) => {
+    const id = localStorage.getItem("user_id");
+    const url = 'http://52.78.206.153:9000/member/addressUpdate';
+    const data = {id, zipcode, address};
+    const result = await axiosPut({url, data});
+    result.result_rows && dispatch(getOrderList());
+}
 
 /**
  * 결제 완료 후 주문테이블 저장 : saveToOrder
@@ -12,8 +19,7 @@ export const saveToOrder = (orderList, totalPrice) => async(dispatch) => {
     const id = localStorage.getItem("user_id"); 
     const tid = localStorage.getItem("tid"); 
     const type = "KAKAO_PAY"; 
-    let result_rows = 0;
-    const url = 'http://localhost:9000/order/add';
+    const url = 'http://52.78.206.153:9000/order/add';
     const data = {  
         id: id,  
         tid: tid,
@@ -44,7 +50,7 @@ export const paymentKakaoPay = (totalPrice, orderList) => async(dispatch) => {
     const id = localStorage.getItem("user_id"); 
     const type = "KAKAO_PAY"; 
     const pname = orderList[0].pname.concat(" 외");
-    const url = 'http://localhost:9000/payment/qr';
+    const url = 'http://52.78.206.153:9000/payment/qr';
     const data = {
         id:id,
         item_name: pname,
@@ -70,15 +76,11 @@ export const paymentKakaoPay = (totalPrice, orderList) => async(dispatch) => {
  */
 export const getOrderList = () => async(dispatch) => {
     const id = localStorage.getItem("user_id");
-    const url = 'http://localhost:9000/order/all';
+    const url = 'http://52.78.206.153:9000/order/all';
     const data = {"id": id};
 
     const result = await axiosPost({url, data});  
     const member = result[0];
     dispatch(setOrderList({result}));
     dispatch(setMember({member}));
-
-    // calculateTotalPrice(result.data);
-
-    // return result.data;
 }

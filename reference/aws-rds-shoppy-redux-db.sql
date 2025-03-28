@@ -1,3 +1,16 @@
+-- aws rds 데이터베이스 생성
+create database hrdb2019;
+
+-- 데이터베이스 선택
+use hrdb2019;
+
+-- 테이블 목록
+show tables;
+
+-- sql 파일 임포트
+-- 메뉴 : server > Data Import > Dump 파일 선택 > 옵션 : Structrured & Data
+
+
 use hrdb2019;
 show tables;
 
@@ -16,7 +29,7 @@ select  `sc`.`CID` AS `cid`,
         `sp`.`PNAME` AS `pname`,
         `sp`.`PRICE` AS `price`,
         format(`sp`.`PRICE`,0) AS `sprice`,`sp`.`DESCRIPTION` AS `info`,
-        concat('http://localhost:9000/',
+        concat('http://52.78.206.153:9000/',
         json_unquote(json_extract(`sp`.`UPLOAD_FILE`,'$[0]'))) AS `image` 
 from `hrdb2019`.`shoppy_cart` `sc` join `hrdb2019`.`shoppy_member` `sm` join `hrdb2019`.`shoppy_product` `sp` 
 where ((`sc`.`ID` = `sm`.`ID`) and (`sc`.`PID` = `sp`.`PID`));
@@ -38,12 +51,12 @@ select
     `sp`.`PID` AS `pid`,`sp`.`PNAME` AS `pname`,
     `sp`.`PRICE` AS `price`,
     `sp`.`DESCRIPTION` AS `info`,
-    concat('http://localhost:9000/',json_unquote(json_extract(`sp`.`UPLOAD_FILE`,'$[0]'))) AS `image` 
+    concat('http://52.78.206.153:9000/',json_unquote(json_extract(`sp`.`UPLOAD_FILE`,'$[0]'))) AS `image` 
 from `hrdb2019`.`shoppy_cart` `sc` 
 	join `hrdb2019`.`shoppy_member` `sm` 
     join `hrdb2019`.`shoppy_product` `sp` 
 where ((`sc`.`ID` = `sm`.`ID`) and (`sc`.`PID` = `sp`.`PID`));
 
-select * from view_order_list;
-select * from shoppy_cart where id='test1';
-select * from shoppy_order where id='test2';
+select * from shoppy_member;
+
+

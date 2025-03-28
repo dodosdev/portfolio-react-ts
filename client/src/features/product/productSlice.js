@@ -3,23 +3,20 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     productList : [],
     product: {},
-    imgList :[],
+    imgList : [],
     detailImgList: [],
-    size: 'XS'
+    size : 'XS'
 }
-
-
 
 export const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
         setProductList(state, action){
-            state.productList = action.payload.result; //상품 리스트 화면
+            state.productList = action.payload.result;
         },
         setProduct(state, action){
             state.product = action.payload.product;
-
         },
         setImgList(state, action){
             state.imgList = action.payload.imgList;
@@ -33,5 +30,10 @@ export const productSlice = createSlice({
     },
 })
 
-export const { setProductList, setProduct, setImgList,setDetailImgList, setSize  } = productSlice.actions
+export const {  setProductList,
+                setProduct,
+                setImgList,
+                setDetailImgList,
+                setSize
+    } = productSlice.actions
 export default productSlice.reducer

@@ -3,8 +3,7 @@
  */
 import axios from "axios";
 
-
-/** GET Method */
+/** Get Method */
 export async function axiosGet({url, data}){
     let result = null;
     
@@ -18,11 +17,6 @@ export async function axiosGet({url, data}){
 
     return result;    
 }
-
-
-
-
-
 
 /** DELETE Method */
 export async function axiosDelete({url, data}){

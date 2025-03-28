@@ -43,9 +43,10 @@ export const updateQty = async({cid, type}) => {
 export const getCount = async({id}) => {
     const sql = `
         select count(*) as count from shoppy_cart
-            where id= ?
+            where id = ?
     `;
     const [result] = await db.execute(sql, [id]);  // [[{count: 2}] [count필드정보]]
+    
     return result[0]; 
 }
 

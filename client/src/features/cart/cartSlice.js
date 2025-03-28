@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {  //초기 상태
+const initialState = {
     cartList : [],
     cartCount : 0,
     totalPrice : 0,
@@ -8,7 +8,7 @@ const initialState = {  //초기 상태
 }
 
 export const cartSlice = createSlice({
-    name: 'cart',   // Slice의 이름
+    name: 'cart',
     initialState,
     reducers: {
         setCartCount(state, action){
