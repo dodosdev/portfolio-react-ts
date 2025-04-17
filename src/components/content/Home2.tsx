@@ -11,7 +11,7 @@ const Home2: React.FC<HomeProps> = ({logo}) => {
             <section id="home">
             <img className="home__avatar" src={logo.img} alt="portfolio" />
             <h2 className="home__title">Hello <br/> I'm 
-                <strong className="home__title--strong"> Typescript Developer</strong>, {logo.name}</h2>
+                <strong className="home__title--strong"> Frontend Developer</strong>, {logo.name}</h2>
             <p className="home__description">A software engineer currently residing in Seoul, South Korea</p>
             <a className = "home__contact" href="#contact">Contact Me</a>
         </section>

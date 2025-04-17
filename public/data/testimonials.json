@@ -2,22 +2,22 @@
     {
         "img": "images/testimonials/people1.webp",
         "alt": "people1",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis similique, unde nam totam quam, nisi odio error amet provident iste modi eos dicta, eum suscipit rem illum inventore sapiente blanditiis?",
+        "description": "Front End Developer This expert focuses on an application or website's visible and interactive aspects that users directly engage with.",
         "name": "James Kim",
         "company": "Google"
     },
     {
         "img": "images/testimonials/people2.webp",
         "alt": "people1",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis similique, unde nam totam quam, nisi odio error amet provident iste modi eos dicta, eum suscipit rem illum inventore sapiente blanditiis?",
-        "name": "James Kim",
-        "company": "Google"
+        "description": "Back-end developer Their responsibilities lie in managing the behind-the-scenes aspects, encompassing infrastructure and databases, that enable an application to operate efficiently.",
+        "name": "Smith",
+        "company": "NVIDIA"
     },
     {
         "img": "images/testimonials/people3.webp",
         "alt": "people1",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis similique, unde nam totam quam, nisi odio error amet provident iste modi eos dicta, eum suscipit rem illum inventore sapiente blanditiis?",
-        "name": "James Kim",
-        "company": "Google"
+        "description": "Full Stack Developer This versatile professional possesses broader skills and can handle the entire design process from inception to completion. They are adept at both front end and back-end development.",
+        "name": "Rachel Song",
+        "company": "SpaceX"
     }
 ]

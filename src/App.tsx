@@ -56,7 +56,7 @@ function App() {
 
   const logoData = {
     img:"images/alex.jpg",  
-    name:"Alex" 
+    name:"dododev" 
   }
 
   //자식 컴포넌트 맵
@@ -112,7 +112,7 @@ function App() {
       <Footer>
         <Top2
           title="Let's talk"
-          description="jeon.developer.judy@gmail.com"
+          description="dodosdev@gmail.com"
           />
         <ContactLinks2 />
         <Bottom2 />

@@ -6,7 +6,7 @@ import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 const ContactLinks2: React.FC = () => {
     const contactList = [
         {
-            "href":"http://github.com",
+            "href":"https://github.com/dodosdev",
             "type":"github",
         },
         {

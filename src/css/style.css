@@ -22,8 +22,8 @@
     --color-white: #ffffff;
     --color-black: #050a13;
     /* --color-blue: #03e8f9; */
-    --color-blue: #76f903;
-    --color-orange: #fd6413;
+    --color-blue: #883fff;
+    --color-orange: #37ffa9;
     --color-gray: #1b1e26;
   
     /* size */
@@ -35,7 +35,7 @@
   */
   * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
   }
   
   body{
@@ -146,7 +146,7 @@
 .home__avatar {
     width: 250px;
     height: 250px;
-    border: 5px solid var(--color-accent);
+    /* border: 5px solid var(--color-accent); */
     border-radius: 100%;
 }
 .home__title {
@@ -167,7 +167,7 @@
     background-color: var(--color-accent);
     font-weight: bold;
     border-radius: 4px;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 .home__contact:hover {
     color: var(--color-text);
@@ -304,7 +304,7 @@
     top: -20px;
     right: 16px;
     background-color: var(--color-orange);
-    color: var(--color-text);
+    color: var(--color-black);
     width: 28px;
     height: 28px;
     line-height: 28px;
