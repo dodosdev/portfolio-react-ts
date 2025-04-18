@@ -3,7 +3,7 @@ import React from 'react';
 
 const Bottom2: React.FC = () => {
     return (
-        <p>dododev - All right reserved</p>
+        <p>dodo.Dev © All rights reserved.</p>
     );
 }
 
