@@ -56,7 +56,7 @@ function App() {
 
   const logoData = {
     img:"images/alex.jpg",  
-    name:"dododev" 
+    name:"dodo.Dev" 
   }
 
   //자식 컴포넌트 맵

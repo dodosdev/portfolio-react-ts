@@ -2,7 +2,7 @@
     {
       "id": "about",
       "title": "About me",
-      "description": "Front end developers are pivotal in web development. They are entrusted with the critical task of shaping websites' and web applications' user experience and interface.",
+      "description": "I create websites based on your ready-made design. Whether it's a landing page website. I will make it took great and work smoothly on any device.",
       "children": [
         { "component": "Majors2" },
         { "component": "Jobs2" }
@@ -11,7 +11,7 @@
     {
       "id": "skill",
       "title": "My Skills",
-      "description": "Front end developers are pivotal in web development. They are entrusted with the critical task of shaping websites' and web applications' user experience and interface.",
+      "description": "The skills, tools and technologies I use",
       "children": [
         {
           "component": "Skills2",
